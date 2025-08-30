@@ -100,6 +100,7 @@ class ProjectStatusAdapter extends TypeAdapter<ProjectStatus> {
 // JsonSerializableGenerator
 // **************************************************************************
 
+// ignore: unused_element
 Project _$ProjectFromJson(Map<String, dynamic> json) => Project(
       id: json['id'] as String,
       name: json['name'] as String,
@@ -108,6 +109,7 @@ Project _$ProjectFromJson(Map<String, dynamic> json) => Project(
       createdAt: DateTime.parse(json['createdAt'] as String),
     );
 
+// ignore: unused_element
 Map<String, dynamic> _$ProjectToJson(Project instance) => <String, dynamic>{
       'id': instance.id,
       'name': instance.name,

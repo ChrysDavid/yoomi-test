@@ -1,3 +1,5 @@
+// lib/main.dart - Version modifiée
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'providers/projects_provider.dart';
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => ProjectsProvider(),
+          create: (context) => ProjectsProvider(), // Utilise le constructeur par défaut pour l'app normale
         ),
       ],
       child: MaterialApp(

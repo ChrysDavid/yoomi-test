@@ -1,11 +1,13 @@
+// lib/providers/projects_provider.dart - Version modifiée pour l'injection de dépendances
+
 import 'package:flutter/material.dart';
 import '../models/project.dart';
 import '../services/api_service.dart';
 import '../services/storage_service.dart';
 
 class ProjectsProvider with ChangeNotifier {
-  final ApiService _apiService = ApiService();
-  final StorageService _storageService = StorageService();
+  final ApiService _apiService;
+  final StorageService _storageService;
   
   // État des données
   List<Project> _projects = [];
@@ -22,6 +24,13 @@ class ProjectsProvider with ChangeNotifier {
   int _pageSize = 10;
   int _totalProjects = 0;
   bool _hasMorePages = false;
+
+  // Constructeur avec injection de dépendances
+  ProjectsProvider({
+    ApiService? apiService,
+    StorageService? storageService,
+  }) : _apiService = apiService ?? ApiService(),
+       _storageService = storageService ?? StorageService();
 
   // Getters
   List<Project> get projects => _filteredProjects;
@@ -220,3 +229,6 @@ class ProjectsProvider with ChangeNotifier {
     super.dispose();
   }
 }
+
+
+
