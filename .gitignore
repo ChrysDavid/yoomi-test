@@ -1,0 +1,121 @@
+# =============================================================================
+# .gitignore unifié pour yoomi-test (NestJS Backend + Flutter Frontend)
+# =============================================================================
+
+# Fichiers système généraux
+.DS_Store
+Thumbs.db
+*.log
+*.class
+*.pyc
+*.swp
+.atom/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# Variables d'environnement
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# IDE et éditeurs
+.idea/
+*.iml
+*.ipr
+*.iws
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# VS Code (configuration partagée autorisée)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# =============================================================================
+# BACKEND (Next.js/Node.js)
+# =============================================================================
+
+# Dépendances Node.js
+backend\ \(Next.js\)/node_modules/
+backend\ \(Next.js\)/dist/
+backend\ \(Next.js\)/build/
+
+# Logs Node.js
+backend\ \(Next.js\)/logs/
+backend\ \(Next.js\)/*.log
+backend\ \(Next.js\)/npm-debug.log*
+backend\ \(Next.js\)/pnpm-debug.log*
+backend\ \(Next.js\)/yarn-debug.log*
+backend\ \(Next.js\)/yarn-error.log*
+backend\ \(Next.js\)/lerna-debug.log*
+
+# Tests et couverture
+backend\ \(Next.js\)/coverage/
+backend\ \(Next.js\)/.nyc_output/
+
+# Fichiers temporaires
+backend\ \(Next.js\)/.temp/
+backend\ \(Next.js\)/.tmp/
+
+# Runtime data
+backend\ \(Next.js\)/pids/
+backend\ \(Next.js\)/*.pid
+backend\ \(Next.js\)/*.seed
+backend\ \(Next.js\)/*.pid.lock
+
+# Rapports de diagnostic
+backend\ \(Next.js\)/report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Prisma généré
+backend\ \(Next.js\)/generated/
+
+# =============================================================================
+# FRONTEND (Flutter/Dart)
+# =============================================================================
+
+# Flutter/Dart/Pub
+frontend\ \(Flutter\)/**/doc/api/
+frontend\ \(Flutter\)/**/ios/Flutter/.last_build_id
+frontend\ \(Flutter\)/.dart_tool/
+frontend\ \(Flutter\)/.flutter-plugins
+frontend\ \(Flutter\)/.flutter-plugins-dependencies
+frontend\ \(Flutter\)/.pub-cache/
+frontend\ \(Flutter\)/.pub/
+frontend\ \(Flutter\)/build/
+
+# Symbolisation Flutter
+frontend\ \(Flutter\)/app.*.symbols
+
+# Obfuscation Flutter
+frontend\ \(Flutter\)/app.*.map.json
+
+# Android Studio artifacts
+frontend\ \(Flutter\)/android/app/debug/
+frontend\ \(Flutter\)/android/app/profile/
+frontend\ \(Flutter\)/android/app/release/
+
+# Build Flutter
+frontend\ \(Flutter\)/.buildlog/
+
+# =============================================================================
+# Documentation et fichiers temporaires globaux
+# =============================================================================
+
+# Documentation générée
+docs/build/
+*.bak
+*.backup
+
+# Dossiers temporaires globaux
+.tmp/
+.temp/

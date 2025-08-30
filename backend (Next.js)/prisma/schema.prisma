@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+// Enum pour les statuts des projets
+enum Status {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+// Modèle Project avec tous les champs requis
+model Project {
+  id        String   @id @default(uuid()) // Identifiant unique UUID généré automatiquement
+  name      String                        // Nom du projet
+  status    Status                        // Statut du projet (utilise l'enum Status)
+  amount    Float                         // Montant du projet
+  createdAt DateTime @default(now())      // Date de création, générée automatiquement
+}

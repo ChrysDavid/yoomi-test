@@ -1,0 +1,167 @@
+# =============================================================================
+# .gitattributes pour yoomi-test (NestJS Backend + Flutter Frontend)
+# =============================================================================
+
+# Configuration par défaut : normalisation automatique des fins de ligne
+* text=auto
+
+# =============================================================================
+# FICHIERS TEXTE - Normalisation LF (Unix)
+# =============================================================================
+
+# Fichiers de configuration généraux
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.xml text eol=lf
+*.txt text eol=lf
+*.env text eol=lf
+*.example text eol=lf
+
+# Fichiers Git
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# =============================================================================
+# BACKEND (NestJS/TypeScript)
+# =============================================================================
+
+# TypeScript/JavaScript
+*.ts text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.cjs text eol=lf
+*.jsx text eol=lf
+*.tsx text eol=lf
+
+# Configuration Node.js
+package.json text eol=lf
+package-lock.json text eol=lf
+yarn.lock text eol=lf
+pnpm-lock.yaml text eol=lf
+.nvmrc text eol=lf
+.node-version text eol=lf
+
+# Configuration NestJS/ESLint/Prettier
+nest-cli.json text eol=lf
+.eslintrc* text eol=lf
+.prettierrc* text eol=lf
+eslint.config.* text eol=lf
+jest.config.* text eol=lf
+tsconfig*.json text eol=lf
+
+# Prisma
+*.prisma text eol=lf
+prisma/schema.prisma text eol=lf
+prisma/seed.* text eol=lf
+
+# =============================================================================
+# FRONTEND (Flutter/Dart)
+# =============================================================================
+
+# Dart
+*.dart text eol=lf
+
+# Flutter configuration
+pubspec.yaml text eol=lf
+pubspec.lock text eol=lf
+analysis_options.yaml text eol=lf
+
+# Flutter assets
+*.arb text eol=lf
+
+# =============================================================================
+# SCRIPTS ET SHELL
+# =============================================================================
+
+# Scripts Unix (toujours LF)
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Scripts Windows (toujours CRLF)
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Makefiles (toujours LF avec tabs)
+Makefile text eol=lf
+*.mk text eol=lf
+
+# =============================================================================
+# FICHIERS BINAIRES - Pas de normalisation
+# =============================================================================
+
+# Images
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg binary
+*.webp binary
+
+# Vidéos et audio
+*.mp4 binary
+*.avi binary
+*.mov binary
+*.mp3 binary
+*.wav binary
+*.flac binary
+
+# Archives
+*.zip binary
+*.tar binary
+*.gz binary
+*.rar binary
+*.7z binary
+
+# Fonts
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+
+# Exécutables et librairies
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.app binary
+
+# Documents
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+
+# Base de données
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
+
+# Flutter/Android/iOS binaires
+*.apk binary
+*.ipa binary
+*.aab binary
+*.dex binary
+
+# =============================================================================
+# LINGUIST - Classification des langages pour GitHub
+# =============================================================================
+
+# Exclure certains fichiers des statistiques GitHub
+*.generated.* linguist-generated=true
+**/generated/** linguist-generated=true
+**/.dart_tool/** linguist-generated=true
+**/build/** linguist-generated=true
+**/dist/** linguist-generated=true
+**/node_modules/** linguist-generated=true
+
+# Forcer la détection de certains langages
+*.prisma linguist-language=Prisma
